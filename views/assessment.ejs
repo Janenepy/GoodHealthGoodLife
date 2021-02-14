@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>GOOD HEALTH GOOD LIFE</title>
+  <link rel="icon" type="image/png" href="https://uppic.cc/v/6s5D">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+    }
+    #aboutMe {
+      background-color: #A0E0E3;
+      color: black;
+
+    }
+
+    .bg-4 {
+      background-color: #2f2f2f;
+      /* Black Gray */
+      color: #fff;
+      margin-top: 70px;
+    }
+
+    .container-fluid {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 14px;
+      letter-spacing: 5px;
+     
+    }
+
+    .navbar-nav li a:hover {
+      color: #1abc9c !important;
+    }
+
+    .table {
+      text-align: center;
+      border: 2px solid black;
+    }
+
+    .footer {
+      padding-top: 50px;
+    }
+
+    .bg-1 {
+      margin-left: 500px;
+      margin-right: 500px;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 80px;
+      margin-top: 50px;
+    }
+
+    .head{
+      font-size: 25px;
+      color: #1abc9c;
+
+    }
+    p {
+      font-size: 15px;
+      color: red;
+      text-align: left;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <p class="head">HEALTH ASSESSMENT</p>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="\about"><b>ABOUT TEME</b></a></li>
+          <li><a href="\news"><b>NEWS</b></a></li>
+          <li><a href="\"><b>GOOD HEALTH GOOD LIFE</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!--Form-->
+  <div class="container-fluid bg-1" id="aboutMe" style="color:black">
+    <h1 style="text-align:center">Personal information</h1>
+    <br>
+    <form class="form-inline" action="\assessment" method="post">
+      <div class="form-group">
+        <label for="name"> Name :</label>
+        
+        <input type="name" name="name" class="form-control" placeholder="Enter first name" id="name">
+        <br><br>
+
+        <label for="age">Age :</label>
+        <input type="age" name="age" class="form-control" placeholder="Enter age" id="age">
+        <br><br>
+
+        <label for="weight">Weight(Kilogram) :</label>
+        <input type="weight" name="weight" class="form-control" placeholder="Enter weight" id="weight">
+        <br><br>
+
+        <label for="height">Height(Meter) :</label>
+        <input type="height" name="height" class="form-control" placeholder="Enter height" id="height">
+        <br><br>
+        <!----Error Check----->
+        <% if(locals.errors) { %>
+          <div class="alert alert-danger alert-dismissible fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <% Object.values(errors).forEach(function(error){ %>
+          <p id=err>* <%= error.msg %></p> 
+         <% }) %>
+        </div>      
+      <% } %>
+         <!----Error Check----->
+        <a ><button type="submit" class="btn btn-primary btn-lg btn-block">SUMMIT</button></a>
+      </div>
+      
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container-fluid bg-4 text-center">
+    <p class="text-center" style="text-align: center; color: white;">©powerslimgirl</p>
+  </footer>
+
+
+</body>
+
+</html>

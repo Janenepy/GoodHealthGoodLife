@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GOOD HEALTH GOOD LIFE</title>
+    <link rel="icon" type="image/png" href="https://uppic.cc/d/6s5D" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        .head{
+            font-size: 25px;
+            color: #2f2f2f;
+
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+            font-size: 16px;
+            padding: 30px;
+            margin-top: 200px;
+        }
+
+        .container-fluid {
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            background-color: #67CDD2;
+            /* Green */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 14px;
+            letter-spacing: 3px;
+
+        }
+
+        .navbar-nav li a:hover {
+            color: red !important;
+        }
+
+        .bg-1 {
+            width: 1200px;
+            height: 500px;
+            color: black;
+            text-align: center;
+        }
+
+        table ,tr,td{
+            margin-left: 50px;
+            text-align: left;
+            border-spacing: 15px;
+            padding: 20px;
+            
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="head">HEALTH RESULT</p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="\about"><b>ABOUT TEME</b></a></li>
+                    <li><a href="\news"><b>NEWS</b></a></li>
+                    <li><a href="\"><b>GOOD HEALTH GOOD LIFE</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <div class="container bg-1 text-center">
+        <p style="font-size: 50px;"><b>ผลการประเมินการดูแลสุขภาพตนเอง</b></p>
+       
+        <table style="width: 100%;">
+            <tr style="background-color: #2f2f2f;">
+                <td style="text-align: center;"><img src="https://uppic.cc/d/6s5D"></td>
+                
+                <td style="color: #fff;"><b>เกณฑ์คะแนน</b> <br>
+                    ควรปรับปรุง   0-8  คะแนน <br>
+                    พอใช้       9-15  คะแนน<br>
+                    ดี          16-22 คะแนน<br>
+                    ดีมาก       23-30 คะแนน</td>
+                
+            </tr>
+            <tr >
+                <td colspan="2"><b style="font-size: 30px;">คะแนนของคุณอยู่ที่ <%= data %>  คะแนน</b><br><br>
+                  <% if(data>=0 && data<9){ %> 
+                      <strong>สุขภาพของคุณอยู่ในระดับที่ ต้องควรปรับปรุง</strong>
+                       <p> ควรรับประทานอาหารให้ครบ5หมู่ รับประทานผักและผลไม้เป็นประจำ ดื่มน้ำอย่างน้อง8-10แก้วต่อวัน 
+                           พักผ่อนให้เพียงพอควรแบ่งเวลาออกกำลังกายอย่างน้อย30นาทีต่อวัน หลีกเลี่ยงของหวานและอาหาร 
+                           ที่มีไขมันสูง เพื่อไม่ให้ส่งผลผิดปกติในการทำงานของอวัยวะส่วนต่างๆ ในร่างกาย หากไม่ปฏิบัติร่างกาย 
+                           ก็จะขาดวิตามินและแร่ธาตุ ร่างกายก็จะอ่อนแอ ภูมิต้านทานต่ำ เจ็บป่วยบ่อย อาจส่งผลต่อการป่วยเป็นโรค 
+                           ต่างๆได้ง่าย และงดการสูบบุหรี่ เพื่อไม่ให้ส่งผลก่อโรคเกี่ยวกับปอด และงดเครื่องดื่มที่มีแอลกอฮอล์  
+                           เพราะจะส่งผลเสียต่อตับ</p>
+                        <%} else if(data>8 && data<16){%>
+                        <strong> สุขภาพของคุณอยู่ในระดับที่ พอใช้ <strong>
+                        <p>การดูแลสุขภาพอยู่ในระดับพอใช้ แต่หากต้องการให้ร่างกายแข็งแรง ไม่อ่อนแอ โดยต้องดูแลร่างกายให้เป็นประจำหรือบ่อยมากขึ้น 
+                            ควรรับประทานอาหารให้ครบ5หมู่ รับประทานผักและผลไม้เป็นประจำ 
+                            ดื่มน้ำอย่างน้อง8-10แก้วต่อวัน พักผ่อนให้เพียงพอ ควรแบ่งเวลาออกกำลังกายอย่างน้อย30นาทีต่อวัน 
+                            หลีกเลี่ยงของหวานและอาหารที่มีไขมันสูง งดการสูบบุหรี่ เพื่อไม่ให้ส่งผลก่อโรคเกี่ยวกับปอด และงด 
+                            เครื่องดื่มที่มีแอลกอฮอล์ เพราะจะส่งผลเสียต่อตับ</p>
+                        <%} else if(data>15 && data<23){%>
+                        <strong>สุขภาพของคุณอยู่ในระดับ ดี</strong>
+                        <p> การดูแลสุขภาพอยู่ในระดับดี หากได้ทำเป็นประจำมากขึ้นจะส่งผลให้ร่างกายของคุณอยู่ในระดับที่ค่อนข้างดีมาก 
+                            ทำให้อยู่ภาวะเสี่ยงต่อการเจ็บป่วย หรือ เป็นโรค น้อย มีภูมิต้านทานสูง ร่างกายไม่อ่อนแอ ส่งผลให้อวัยวะ 
+                            ภายในทำงานได้อย่างปกติขึ้นด้วย</p>
+                        <%} else if(data>22 && data<31){%>
+                        <strong>สุขภาพของคุณอยู่ในระดับ ดีมาก </strong>
+                        <p>ร่างกายแข็งแรง สมบูรณ์ ส่งผลให้อวัยวะภายในทำงานได้อย่างปกติ
+                            ส่งผลให้ปราศจากโรคภัยไข้เจ็บ และหากปฏิบัติดีที่ประจำสม่ำเสมอ</p>
+                        <%}%>
+            </tr>
+        
+             
+
+        </table>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p class="text-center" style="text-align: center; color: white;">©powerslimgirl</p>
+    </footer>
+
+</body>
+
+</html>

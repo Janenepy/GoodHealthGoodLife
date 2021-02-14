@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>GOOD HEALTH GOOD LIFE</title>
+    <link rel="icon" type="image/png" href="https://uppic.cc/d/6s5D" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        .head {
+            font-size: 25px;
+            color: #1abc9c;
+
+        }
+
+        .bg-1 {
+            background-color: #2f2f2f;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+            padding: 30px;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            background-color: #2f2f2f;
+        }
+
+        .navbar-nav li a:hover {
+            color: red !important;
+            text-decoration: none;
+        }
+
+        a :hover {
+            text-decoration: none;
+        }
+
+        .bg-4 {
+            padding: 30px;
+            margin-top: 100px;
+        }
+
+        .head1 {
+            font-size: 30px;
+            text-align: left;
+            color: #2f2f2f;
+            margin-top: 20px;
+            color: red;
+        }
+
+        .spinner {
+            color: #2f2f2f;
+            width: 500px;
+            height: 500px;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 150px;
+            height: 150px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            margin-left: 500px;
+            margin-top: 50px;
+           
+
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .textbox{
+            text-align: center;
+            
+        }
+
+        .textbox1 {
+            
+            margin-left: 500px;
+            display: inline;
+            text-align: center;
+        }
+        p{
+            color:black
+        }
+        .Box{
+            margin-top: 40px;
+            background-color: aquamarine;
+            margin-left: 250px;
+            margin-right: 250px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <!------- Navbar --------->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="head">GOOD HEALTH GOOD LIFE </p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="\about"><b>ABOUT TEME</b></a></li>
+                    <li><a href="\"><b>GOOD HEALTH GOOD LIFE</b></a></li>
+                    <li><a href="\assessment"><b>HEALTH ASSESSMENT</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="Box">
+    <div class="loader"></div>
+    <br>
+    <div class="textbox">
+        <b>
+        <% Object.values(data_profile).forEach(function(dat){ %>
+        <p><%= dat %></p>
+        <% }) %></b>
+    </div>
+    <div class="textbox1">    
+        <a href="\form" ><button type="button" class="btn btn-primary btn-lg  ">BACK</button></a>
+        <a href="\result"><button type="button" class="btn btn-success btn-lg  ">Result</button></a>
+    </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p class="text-center" style="text-align: center; color: white;">©powerslimgirl</p>
+    </footer>
+
+</body>
+
+</html>
